@@ -56,6 +56,8 @@
     </bean>
 -->
 
+    <bean id="beanLifecycleDemoBean" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
+    </bean>
     <bean name="movieD,movieE" class="com.stackroute.domain.Movie" scope="prototype" >
         <property name="actor" ref="actorD"></property>
 

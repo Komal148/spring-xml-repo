@@ -46,5 +46,7 @@ public class Main {
         Movie movie9= (Movie) context.getBean("movieE");
         System.out.println(movie9.getActor());
 
+        ((ClassPathXmlApplicationContext) context).close();
+
     }
 }
