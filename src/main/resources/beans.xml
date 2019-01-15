@@ -43,18 +43,18 @@
         <constructor-arg name="age" value="27"></constructor-arg>
     </bean>
 
-    <bean id="movieA" class="com.stackroute.domain.Movie">
-        <constructor-arg index="0" ref="actorA"></constructor-arg>
+    <bean id="movieA" class="com.stackroute.domain.Movie" >
+        <constructor-arg index="0" ref="actorB"></constructor-arg>
     </bean>
 
-    <bean id="movieB" class="com.stackroute.domain.Movie">
+    <!--<bean id="movieB" class="com.stackroute.domain.Movie">
         <constructor-arg index="0" ref="actorB"></constructor-arg>
     </bean>
 
     <bean id="movieC" class="com.stackroute.domain.Movie">
         <constructor-arg index="0" ref="actorC"></constructor-arg>
     </bean>
-
+-->
 
     <bean name="movieD,movieE" class="com.stackroute.domain.Movie" scope="prototype" >
         <property name="actor" ref="actorD"></property>

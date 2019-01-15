@@ -14,16 +14,7 @@ import org.springframework.core.io.ClassPathResource;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-        BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        Movie movie=(Movie) beanFactory.getBean("movie");
-        System.out.println(movie.getActor());*/
-/*
-         BeanDefinitionRegistry beanDefinitionRegistry=new DefaultListableBeanFactory();
-         BeanDefinitionReader beanDefinitionReader=new XmlBeanDefinitionReader(beanDefinitionRegistry);
-         beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
-         Movie movie1=((DefaultListableBeanFactory) beanDefinitionRegistry).getBean(Movie.class);
-         System.out.println(movie1.getActor());*/
+
 
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Movie movie2=(Movie) context.getBean("movie");
@@ -32,7 +23,7 @@ public class Main {
         Movie movie3=(Movie) context.getBean("movieA");
         System.out.println(movie3.getActor());
 
-        Movie movie4=(Movie) context.getBean("movieB");
+        /*Movie movie4=(Movie) context.getBean("movieB");
         System.out.println(movie4.getActor());
 
         Movie movie5=(Movie) context.getBean("movieC");
@@ -47,7 +38,7 @@ public class Main {
         movie6=(Movie) context.getBean("movie");
         movie7=(Movie) context.getBean("movie");
         System.out.println("Equality Check after Scope in Movie: "+ (movie7 == movie6) );
-
+*/
 
         System.out.println("Using Name attribute");
         Movie movie8=(Movie) context.getBean("movieD");
