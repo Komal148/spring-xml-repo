@@ -5,6 +5,17 @@ public class Actor {
         return name;
     }
 
+    public Actor()
+    {
+
+    }
+
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Actor{" +
